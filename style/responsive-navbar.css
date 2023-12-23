@@ -1,0 +1,165 @@
+/* --- Custom Properties --- */
+:root {
+  --bg-prime: hsla(0, 100%, 50%, 0.2);
+  --bg-second: hsla(0, 0%, 0%, 0.2);
+
+  /* --dark: #333;
+  --light: #fff;
+  --prime: #141e30;
+  --second: #f7eba6; */
+
+  --menu-width: 30px;
+  --menu-height: 30px;
+
+  --btn-width: 30px;
+  --btn-height: 4px;
+  --btn-radius: 5px;
+
+  --menu-bar-offsetUp: 10px;
+  --menu-bar-offsetDown: -10px;
+}
+
+/* --- Mobile Navbar --- */
+.mobile-nav {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(0, 1);
+  transform-origin: right;
+  z-index: 4;
+}
+
+.mobile-menu {
+  margin: auto;
+}
+
+#mobile-menu li {
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mobile-adress {
+  color: var(--light);
+  font-size: 1.5rem;
+  margin: auto;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.mobile-adress p {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* --- Hamburger Menu Icon --- */
+.menu-container {
+  display: none;
+  margin: 1rem;
+  position: fixed;
+  z-index: 5;
+}
+
+/* overlap checkbox with menu-buttons */
+#menu-toggle,
+#menu-btn-container {
+  cursor: pointer;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#menu-toggle {
+  height: var(--menu-height);
+  width: var(--menu-width);
+  z-index: 2;
+  opacity: 0;
+}
+
+/* --- Menu Button --- */
+#menu-btn-container {
+  height: var(--menu-height);
+  width: var(--menu-width);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Hamburg Menu Layout --- */
+#menu-btn,
+#menu-btn::before,
+#menu-btn::after {
+  height: var(--btn-height);
+  width: var(--btn-width);
+  border-radius: var(--btn-radius);
+  background-color: var(--light);
+  position: absolute;
+  transition: all 400ms ease-in-out;
+}
+
+#menu-btn::before {
+  content: '';
+  top: var(--menu-bar-offsetUp);
+}
+
+#menu-btn::after {
+  content: '';
+  top: var(--menu-bar-offsetDown);
+}
+
+#menu-toggle:checked+#menu-btn-container #menu-btn {
+  transform: rotate(135deg);
+}
+
+#menu-toggle:checked+#menu-btn-container #menu-btn::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu-toggle:checked+#menu-btn-container #menu-btn::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 580px) {
+  nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  /* #mobile-menu {
+    display: grid;
+  } */
+
+  .menu-container {
+    display: grid;
+  }
+}
+
+@media (max-height: 400px) {
+  .menu-container {
+    right: 0;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .mobile-adress {
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+  }
+}
