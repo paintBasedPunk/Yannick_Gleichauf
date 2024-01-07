@@ -543,10 +543,6 @@ footer i {
 }
 
 @media (max-width: 680px) {
-  .flex-column{
-    max-width: 100%;
-  }
-
   header h2 {
     font-size: 1.5rem;
   }
@@ -580,6 +576,10 @@ footer i {
 }
 
 @media (max-width: 480px) {
+  .flex-column{
+    max-width: 100%;
+  }
+
   header h2 img{
     width: 45px;
   }
