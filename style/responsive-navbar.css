@@ -73,6 +73,8 @@
 .menu-container {
   display: none;
   margin: 1rem;
+  padding: 0.8rem;
+  border-radius: 50%;
   position: fixed;
   z-index: 5;
 }
