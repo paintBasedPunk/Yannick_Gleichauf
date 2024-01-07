@@ -521,11 +521,13 @@ footer i {
 }
 
 /* --- Media Queries --- */
-@media(max-width: 1200px) {
+@media(max-width: 1980px){
   nav{
     padding-inline: 0;
   }
+}
 
+@media(max-width: 1200px) {
   .flex-column{
     max-width: 50%;
   }
