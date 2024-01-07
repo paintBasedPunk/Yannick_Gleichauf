@@ -66,7 +66,7 @@ body {
   width: 100%;
 }
 
-.bottom{
+.bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -209,7 +209,7 @@ nav div {
   background: rgba(10, 10, 10, 0.3);
 } */
 
-.bg-layer{
+.bg-layer {
   position: absolute;
 
   width: 100svw;
@@ -221,14 +221,14 @@ nav div {
 }
 
 /* --- Automatic Fade-In --- */
-.auto-container{
+.auto-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
   display: none;
 }
 
-.auto-img{
+.auto-img {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
@@ -275,16 +275,16 @@ header h2 img {
   margin: 1rem;
 }
 
-.h2-mobile{
+.h2-mobile {
   display: none;
 }
 
-.logo-title{
+.logo-title {
   max-width: 500px;
   display: grid;
 }
 
-.logo-title img{
+.logo-title img {
   width: 100%;
   border-radius: 15px;
   object-fit: scale-down;
@@ -293,7 +293,7 @@ header h2 img {
   grid-row: 1 / 2;
 }
 
-.logo-title a{
+.logo-title a {
   color: #dfd583;
   display: block;
   margin: 1.5rem auto;
@@ -363,7 +363,7 @@ header h2 img {
   flex-wrap: wrap;
 }
 
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
   max-width: 25%;
@@ -398,7 +398,7 @@ header h2 img {
   opacity: 0.8;
 }
 
-.card:hover .card-content{
+.card:hover .card-content {
   /* transform: translate(-50%, -50%); */
   opacity: 1;
 }
@@ -422,7 +422,7 @@ header h2 img {
   color: var(--light);
 }
 
-.c2{
+.c2 {
   border: red 2px solid;
 }
 
@@ -521,20 +521,20 @@ footer i {
 }
 
 /* --- Media Queries --- */
-@media(max-width: 1980px){
-  nav{
+@media(max-width: 1980px) {
+  nav {
     padding-inline: 0;
   }
 }
 
 @media(max-width: 1200px) {
-  .flex-column{
+  .flex-column {
     max-width: 50%;
   }
 }
 
 @media(max-width: 800px) {
-.container header {
+  .container header {
     font-size: 1.2rem;
   }
 
@@ -575,6 +575,10 @@ footer i {
     font-size: 1.2rem;
   }
 
+  .gallery-title {
+    font-size: 2rem;
+  }
+
   .about-content {
     margin-top: 3.5rem;
     font-size: 1.2rem;
@@ -582,11 +586,11 @@ footer i {
 }
 
 @media (max-width: 480px) {
-  .flex-column{
+  .flex-column {
     max-width: 100%;
   }
 
-  header h2 img{
+  header h2 img {
     width: 45px;
   }
 
@@ -594,7 +598,7 @@ footer i {
     display: none;
   }
 
-  .h2-mobile{
+  .h2-mobile {
     display: flex;
     text-align: left;
   }

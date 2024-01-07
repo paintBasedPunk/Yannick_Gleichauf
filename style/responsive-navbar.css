@@ -41,10 +41,18 @@
   margin: auto;
 }
 
-#mobile-menu li {
+.mobile-menu li {
   margin: 1.5rem;
   font-size: 1.5rem;
   text-align: center;
+}
+
+.mobile-nav .portfolio-menu li{
+  font-size: 1.5rem;
+}
+
+.mobile-nav .portfolio-menu li:nth-child(2){
+  border-inline: rgba(220,220,220, 0.4) 2px solid;
 }
 
 .mobile-adress {
