@@ -109,6 +109,7 @@ nav {
 
   border-radius: 10px;
   margin: 0.75rem;
+  padding-inline: 10vw;
 }
 
 nav div {
@@ -122,7 +123,7 @@ nav div {
   color: var(--light);
   border-radius: 10px;
   margin-inline: 1rem;
-  padding: 0.2rem;
+  padding: 0.2rem 0;
 }
 
 .logo img {
@@ -137,7 +138,6 @@ nav div {
 
 /* --- Navigation --- */
 .menu {
-  border-radius: 10px;
   margin-inline: 2rem;
   text-align: right;
   display: flex;
@@ -522,13 +522,17 @@ footer i {
 
 /* --- Media Queries --- */
 @media(max-width: 1200px) {
+  nav{
+    padding-inline: 0;
+  }
+
   .flex-column{
     max-width: 50%;
   }
 }
 
 @media(max-width: 800px) {
-  .container header {
+.container header {
     font-size: 1.2rem;
   }
 
