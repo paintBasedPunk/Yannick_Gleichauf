@@ -223,7 +223,7 @@ modal.addEventListener("click", function (e) {
   }
 });
 
-//disable right click
+//--- Disable Right Click ---
 // window.addEventListener(
 //   "contextmenu",
 //   function (e) {

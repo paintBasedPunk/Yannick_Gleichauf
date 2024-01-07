@@ -198,7 +198,7 @@ nav div {
   position: relative;
 }
 
-/* insert a layer over the home section */
+/* --- Background Image Layer --- */
 /* .home::before {
   content: "";
   position: absolute;
@@ -218,10 +218,6 @@ nav div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
 }
 
 /* --- Automatic Fade-In --- */
@@ -277,7 +273,6 @@ header h2 img {
   -webkit-filter: invert(1);
   filter: invert(1);
   margin: 1rem;
-  /* order: -1; */
 }
 
 .h2-mobile{
@@ -310,11 +305,6 @@ header h2 img {
   grid-row: 1 / 2;
   align-self: end;
 }
-
-/* .desktop-header {
-  font-size: 1.5rem;
-  transform: translateX(-7%);
-} */
 
 .mobile-header {
   display: none;
@@ -358,13 +348,82 @@ header h2 img {
 
   display: inline-block;
   text-transform: uppercase;
-  /* border-top: #fff 2px solid; */
   border-top: var(--dark) 2px solid;
 }
 
 .portfolio section {
   grid-column: 2 / 3;
   padding: 3rem 0;
+}
+
+/* -- Gallery Settings -- */
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+}
+
+/* - Card - */
+.card {
+  cursor: pointer;
+  margin: 2px;
+  flex-grow: 1;
+
+  display: flex;
+  /* position: relative; */
+}
+
+/* overlap img & content */
+/* .card img,
+.card-content {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+} */
+
+.pic {
+  width: 100%;
+  object-fit: cover;
+  /* aspect-ratio: 1 / 1; */
+
+  transition: all 500ms ease-in;
+}
+
+.card:hover .pic {
+  opacity: 0.8;
+}
+
+.card:hover .card-content{
+  /* transform: translate(-50%, -50%); */
+  opacity: 1;
+}
+
+/* -- unfinished card hover effect -- */
+.card-content {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  transition: all 500ms ease-in;
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+}
+
+.card-content h3 {
+  margin: auto;
+  color: var(--light);
+}
+
+.c2{
+  border: red 2px solid;
 }
 
 /* --- About Section --- */
@@ -462,22 +521,11 @@ footer i {
 }
 
 /* --- Media Queries --- */
-/* @media(max-width: 1400px) {
-  nav {
-    border-radius: 10px;
-    margin-inline: 0.75rem;
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(230, 230, 230, 0.2);
+@media(max-width: 1200px) {
+  .flex-column{
+    max-width: 50%;
   }
-} */
-
-/* @media(max-width: 1200px) {
-  .portfolio .desktop-adress{
-    display: none;
-  }
-} */
+}
 
 @media(max-width: 800px) {
   .container header {
@@ -495,6 +543,10 @@ footer i {
 }
 
 @media (max-width: 680px) {
+  .flex-column{
+    max-width: 100%;
+  }
+
   header h2 {
     font-size: 1.5rem;
   }
