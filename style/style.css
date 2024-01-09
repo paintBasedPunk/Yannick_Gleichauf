@@ -145,6 +145,10 @@ nav div {
   width: 35px;
 }
 
+.desktop-adress{
+  display: none;
+}
+
 .desktop-adress p {
   margin-inline: 0.5rem;
 }
@@ -231,6 +235,63 @@ nav div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* --- Contact Modal --- */
+.contact{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--light);
+  
+  padding: 5rem;
+  border-radius: 15px;
+  z-index: 8;
+
+  display: none;
+}
+
+.contact p{
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+
+.contact .close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@keyframes contact-fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes contact-fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
 }
 
 /* --- Automatic Fade-In --- */
@@ -488,15 +549,15 @@ footer a {
   color: var(--dark);
 }
 
-footer a:hover i {
-  transform: scale(1.1);
-}
-
 footer i {
   font-size: 2rem;
   color: var(--light);
-  /* color: var(--dark); */
+  cursor: pointer;
   transition: transform 300ms ease-in-out;
+}
+
+footer i:hover {
+  transform: scale(1.1);
 }
 
 .social-icons {

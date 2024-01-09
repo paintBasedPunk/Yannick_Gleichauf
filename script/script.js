@@ -35,3 +35,47 @@ document.documentElement.style.setProperty(
 //     navbar.style.backgroundColor = "rgba(30, 30, 30, 0)";
 //   }
 // });
+
+// --- Show Contact Modal ---
+let contact = document.getElementById('contact')
+let contactBtn = document.getElementById('contact-btn')
+let contactClose = document.getElementById('contact-close')
+let socialIcons = document.querySelectorAll('i')
+
+function showContact() {
+  contact.style.animation = "contact-fadeIn 800ms forwards";
+  contact.style.display = 'block'
+}
+
+function closeContact() {
+  contact.style.animation = "contact-fadeOut 800ms forwards";
+  setTimeout(
+    function () {
+      contact.style.display = 'none'
+    }, 800);
+}
+
+//close modal when clicking outside of the image
+/*
+document.body.addEventListener("click", function (e) {
+  if (
+    // e.target.id !== 'contact' &&
+    // e.target.classList.contains('fa-solid') 
+    // e.target !== contact &&
+    // e.target == socialIcons
+    // e.target != modal_img &&
+    // e.target != next &&
+    // e.target != prev &&
+    // e.target != caption &&
+    // e.target != close_btn &&
+    // e.target != fullScreen_btn &&
+    // e.target != fullScreen_icon
+  ) {
+    closeContact()
+    console.log(e.target.classList)
+  }
+});
+*/
+
+contactBtn.addEventListener('click', showContact)
+contactClose.addEventListener('click', closeContact)

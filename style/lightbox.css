@@ -62,7 +62,7 @@
   margin: 1rem;
 }
 
-#close-btn {
+.close-btn {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
