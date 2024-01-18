@@ -499,7 +499,7 @@ header h2 img {
 
 /* --- About Section --- */
 .about {
-  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
 }
 
@@ -608,7 +608,7 @@ footer i:hover {
 .social-icons-mobile {
   margin: auto;
   font-size: 2.2rem;
-  margin-bottom: 15vh;
+  margin-bottom: 15svh;
 }
 
 /* --- Media Queries --- */
