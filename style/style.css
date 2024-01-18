@@ -200,12 +200,12 @@ nav div {
 
 .menu li a:hover::before,
 .portfolio-menu li a:hover::before,
-.my-work:hover::before{
+.btn-bg:hover .my-work::before{
   transform: scale(1, 1);
 }
 
 .menu li a:hover::before,
-.my-work:hover::before  {
+.btn-bg:hover .my-work::before  {
   transform-origin: right;
 }
 
@@ -545,7 +545,7 @@ header h2 img {
 .btn-wrap{
   display: flex;
   margin: 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn-bg{
