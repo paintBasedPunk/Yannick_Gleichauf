@@ -76,19 +76,6 @@ body {
   font-weight: 900;
 }
 
-.my-work{
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 900;
-
-  display: inline-block;
-  margin: 1rem auto;
-
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  text-transform: uppercase;
-}
-
 .scale-down {
   aspect-ratio: 1 / 1.6;
 }
@@ -179,7 +166,8 @@ nav div {
   display: flex;
 }
 
-.menu li a {
+.menu li a,
+.my-work {
   display: block;
   padding: 0.3rem 0;
   margin-inline: 0.45rem;
@@ -187,7 +175,8 @@ nav div {
 }
 
 .menu li a::before,
-.portfolio-menu li a::before {
+.portfolio-menu li a::before,
+.my-work::before {
   content: '';
   display: block;
   height: 2px;
@@ -200,7 +189,8 @@ nav div {
   transition: transform ease-in-out 300ms;
 }
 
-.menu li a::before {
+.menu li a::before,
+.my-work::before {
   transform-origin: left;
 }
 
@@ -209,11 +199,13 @@ nav div {
 }
 
 .menu li a:hover::before,
-.portfolio-menu li a:hover::before {
+.portfolio-menu li a:hover::before,
+.my-work:hover::before{
   transform: scale(1, 1);
 }
 
-.menu li a:hover::before {
+.menu li a:hover::before,
+.my-work:hover::before  {
   transform-origin: right;
 }
 
@@ -547,6 +539,25 @@ header h2 img {
 .about-img {
   width: 100%;
   object-fit: cover;
+}
+
+/* -- 'My Work' Button -- */
+.btn-wrap{
+  display: flex;
+  margin: 1rem;
+}
+
+.btn-bg{
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: auto;
+}
+
+.my-work{
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 /* --- Footer --- */
