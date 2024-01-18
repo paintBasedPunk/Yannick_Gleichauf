@@ -72,7 +72,7 @@
 /* --- Hamburger Menu Icon --- */
 .menu-container {
   display: none;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   padding: 0.8rem;
   border-radius: 50%;
   position: fixed;
