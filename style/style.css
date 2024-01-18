@@ -70,6 +70,24 @@ body {
   border-top: var(--dark) 2px solid;
 }
 
+.title p{
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.my-work{
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--dark);
+  display: inline-block;
+  margin: 1rem auto;
+
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
 .scale-down {
   aspect-ratio: 1 / 1.6;
 }
