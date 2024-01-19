@@ -40,11 +40,13 @@ document.documentElement.style.setProperty(
 let contact = document.getElementById('contact')
 let contactBtn = document.getElementById('contact-btn')
 let contactClose = document.getElementById('contact-close')
-let socialIcons = document.querySelectorAll('i')
 
 function showContact() {
-  contact.style.animation = "contact-fadeIn 800ms forwards";
-  contact.style.display = 'block'
+
+  // if(contact.className.contains = 'active'){
+    contact.style.animation = "contact-fadeIn 800ms forwards";
+    contact.style.display = 'block'
+  // }
 }
 
 function closeContact() {
@@ -55,27 +57,13 @@ function closeContact() {
     }, 800);
 }
 
-//close modal when clicking outside of the image
-/*
-document.body.addEventListener("click", function (e) {
-  if (
-    // e.target.id !== 'contact' &&
-    // e.target.classList.contains('fa-solid') 
-    // e.target !== contact &&
-    // e.target == socialIcons
-    // e.target != modal_img &&
-    // e.target != next &&
-    // e.target != prev &&
-    // e.target != caption &&
-    // e.target != close_btn &&
-    // e.target != fullScreen_btn &&
-    // e.target != fullScreen_icon
-  ) {
-    closeContact()
-    console.log(e.target.classList)
+//close contact-modal by pressing "ESC"
+document.body.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+      closeContact();
   }
 });
-*/
+
 
 contactBtn.addEventListener('click', showContact)
 contactClose.addEventListener('click', closeContact)
