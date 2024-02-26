@@ -120,7 +120,7 @@ nav {
   right: 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   text-transform: uppercase;
@@ -132,12 +132,17 @@ nav {
 }
 
 nav div {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-content: center;
+  width: 100%;
 }
 
 /* --- Logo --- */
 .logo {
+  grid-column: 1 / 2;
   cursor: pointer;
   color: var(--light);
   border-radius: 10px;
@@ -151,16 +156,9 @@ nav div {
   width: 35px;
 }
 
-.desktop-adress{
-  display: none;
-}
-
-.desktop-adress p {
-  margin-inline: 0.5rem;
-}
-
 /* --- Navigation --- */
 .menu {
+  grid-column: 2 / 3;
   margin-inline: 2rem;
   text-align: right;
   display: flex;
@@ -397,9 +395,10 @@ header h2 img {
 
 /* --- Portfolio Section --- */
 .portfolio-menu {
-  border-radius: 10px;
   text-align: left;
   display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
