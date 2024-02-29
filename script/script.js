@@ -26,36 +26,38 @@ document.documentElement.style.setProperty(
 //   navbarHeight + "px"
 // );
 
-// --- Change Navbar Background-Color on Scroll ---
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset > 1) {
-//     navbar.style.backgroundColor = "rgba(30, 30, 30, 1)";
-//   }
-//   if (window.pageYOffset < 1) {
-//     navbar.style.backgroundColor = "rgba(30, 30, 30, 0)";
-//   }
-// });
 
 // --- Show Contact Modal ---
 let contact = document.getElementById('contact')
+let contactContainer = document.getElementById('contact-container')
 let contactBtn = document.getElementById('contact-btn')
 let contactClose = document.getElementById('contact-close')
 
 function showContact() {
-
   // if(contact.className.contains = 'active'){
-    contact.style.animation = "contact-fadeIn 800ms forwards";
-    contact.style.display = 'block'
+    contactContainer.style.animation = "fade 800ms forwards";
+    contact.style.animation = "fade 800ms forwards";
+    contact.style.animation = "moveDown 800ms forwards";
+    contactContainer.style.display = 'block'
   // }
 }
 
 function closeContact() {
-  contact.style.animation = "contact-fadeOut 800ms forwards";
+  contactContainer.style.animation = "fadeOut 400ms forwards";
+  contact.style.animation = "fadeOut 800ms forwards";
+  contact.style.animation = "moveUp 800ms forwards";
   setTimeout(
     function () {
-      contact.style.display = 'none'
-    }, 800);
+      contactContainer.style.display = 'none'
+    }, 810);
 }
+
+contactContainer.addEventListener('click', function(e){
+  if(e.target === contactContainer){
+    console.log(e.target.id)
+    closeContact()
+  }
+})
 
 //close contact-modal by pressing "ESC"
 document.body.addEventListener("keydown", function (e) {
