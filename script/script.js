@@ -6,14 +6,14 @@ let contactClose = document.getElementById('contact-close')
 
 function showContact() {
   contactContainer.style.animation = "fade 800ms forwards";
-  contact.style.animation = "fade 800ms forwards";
+  contact.style.animation = "fade 600ms forwards";
   contact.style.animation = "moveDown 800ms forwards";
   contactContainer.style.display = 'block'
 }
 
 function closeContact() {
-  contactContainer.style.animation = "fadeOut 400ms forwards";
-  contact.style.animation = "fadeOut 800ms forwards";
+  contactContainer.style.animation = "fadeOut 800ms forwards";
+  contact.style.animation = "fadeOut 600ms forwards";
   contact.style.animation = "moveUp 800ms forwards";
   setTimeout(
     function () {
