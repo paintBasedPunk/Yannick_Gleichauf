@@ -70,7 +70,7 @@ body {
   border-top: var(--dark) 2px solid;
 }
 
-.title p{
+.title p {
   font-family: 'Big Shoulders Display', sans-serif;
   font-size: 3.5rem;
   font-weight: 900;
@@ -198,12 +198,12 @@ nav div {
 
 .menu li a:hover::before,
 .portfolio-menu li a:hover::before,
-.btn-bg:hover .my-work::before{
+.btn-bg:hover .my-work::before {
   transform: scale(1, 1);
 }
 
 .menu li a:hover::before,
-.btn-bg:hover .my-work::before  {
+.btn-bg:hover .my-work::before {
   transform-origin: right;
 }
 
@@ -247,7 +247,7 @@ nav div {
 }
 
 /* --- Contact Modal --- */
-.contact-container{
+.contact-container {
   position: fixed;
   min-height: 100vh;
   width: 100%;
@@ -260,20 +260,20 @@ nav div {
   display: none;
 }
 
-.contact{
+.contact {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: var(--light);
-  
+
   padding: 5rem;
   border-radius: 15px;
   z-index: 3;
 }
 
-.contact p{
+.contact p {
   font-family: 'Big Shoulders Display', sans-serif;
   font-size: 3rem;
   text-align: center;
@@ -281,7 +281,7 @@ nav div {
   margin: 1rem 0;
 }
 
-.contact .close-btn{
+.contact .close-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -517,19 +517,19 @@ header h2 img {
 }
 
 /* -- 'My Work' Button -- */
-.btn-wrap{
+.btn-wrap {
   display: flex;
   margin: 1rem;
   /* cursor: pointer; */
 }
 
-.btn-bg{
+.btn-bg {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   margin: auto;
 }
 
-.my-work{
+.my-work {
   font-family: 'Big Shoulders Display', sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
@@ -647,7 +647,7 @@ footer i:hover {
   }
 }
 
-@media(max-width:580px){
+@media(max-width:580px) {
   .social-icons {
     display: none;
   }
@@ -693,7 +693,7 @@ footer i:hover {
   }
 }
 
-@keyframes moveDown{
+@keyframes moveDown {
   from {
     transform: translate(-50%, -60%);
   }
@@ -703,7 +703,7 @@ footer i:hover {
   }
 }
 
-@keyframes moveUp{
+@keyframes moveUp {
   from {
     transform: translate(-50%, -50%);
   }

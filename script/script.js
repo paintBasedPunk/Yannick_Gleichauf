@@ -1,32 +1,3 @@
-// --- Template Setting ---
-// let navbar = document.querySelector("nav");
-// let navbarHeight = navbar.offsetHeight;
-
-// Set the Navbar Height
-let footer = document.querySelector("footer");
-let footerHeight = footer.offsetHeight;
-
-document.documentElement.style.setProperty(
-  "--footer-height",
-  footerHeight + "px"
-);
-
-// calculate the height of the container
-// let containerHeight = window.innerHeight - navbarHeight;
-
-// set the value of the "--height" variable from the css file
-// document.documentElement.style.setProperty(
-//   "--container-height",
-//   containerHeight + "px"
-// );
-
-// Set the Navbar Height
-// document.documentElement.style.setProperty(
-//   "--navbar-height",
-//   navbarHeight + "px"
-// );
-
-
 // --- Show Contact Modal ---
 let contact = document.getElementById('contact')
 let contactContainer = document.getElementById('contact-container')
@@ -34,12 +5,10 @@ let contactBtn = document.getElementById('contact-btn')
 let contactClose = document.getElementById('contact-close')
 
 function showContact() {
-  // if(contact.className.contains = 'active'){
-    contactContainer.style.animation = "fade 800ms forwards";
-    contact.style.animation = "fade 800ms forwards";
-    contact.style.animation = "moveDown 800ms forwards";
-    contactContainer.style.display = 'block'
-  // }
+  contactContainer.style.animation = "fade 800ms forwards";
+  contact.style.animation = "fade 800ms forwards";
+  contact.style.animation = "moveDown 800ms forwards";
+  contactContainer.style.display = 'block'
 }
 
 function closeContact() {
@@ -52,8 +21,8 @@ function closeContact() {
     }, 810);
 }
 
-contactContainer.addEventListener('click', function(e){
-  if(e.target === contactContainer){
+contactContainer.addEventListener('click', function (e) {
+  if (e.target === contactContainer) {
     console.log(e.target.id)
     closeContact()
   }
@@ -62,7 +31,7 @@ contactContainer.addEventListener('click', function(e){
 //close contact-modal by pressing "ESC"
 document.body.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
-      closeContact();
+    closeContact();
   }
 });
 
