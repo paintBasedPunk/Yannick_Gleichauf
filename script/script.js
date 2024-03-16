@@ -28,13 +28,28 @@ contactContainer.addEventListener('click', function (e) {
   }
 })
 
-//close contact-modal by pressing "ESC"
+// --- Close contact-modal by pressing "ESC" ---
 document.body.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     closeContact();
   }
 });
 
-
 contactBtn.addEventListener('click', showContact)
 contactClose.addEventListener('click', closeContact)
+
+// --- Hide the Title Screen on Click ---
+let layer = document.getElementById('layer')
+let layerWrap = document.getElementById('layer-wrap')
+
+function hideLayer(){
+  layer.style.animation = "fadeOut 1000ms forwards";
+  layerWrap.style.animation = "fadeOut 900ms forwards";
+  layerWrap.style.animation = "moveUp-Y 800ms forwards";
+  setTimeout(
+    function () {
+      layer.style.display = 'none'
+    }, 1100);
+}
+
+layerWrap.addEventListener('click', hideLayer)
