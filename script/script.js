@@ -46,6 +46,7 @@ function hideLayer(){
   layer.style.animation = "fadeOut 1000ms forwards";
   layerWrap.style.animation = "fadeOut 900ms forwards";
   layerWrap.style.animation = "moveUp-Y 800ms forwards";
+  document.getElementById('default').style.overflow = 'visible'
   setTimeout(
     function () {
       layer.style.display = 'none'
