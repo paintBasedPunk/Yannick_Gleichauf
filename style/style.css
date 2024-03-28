@@ -525,20 +525,21 @@ header h2 img {
 /* -- 'My Work' Button -- */
 .btn-wrap {
   display: flex;
-  margin: 1rem;
-  /* cursor: pointer; */
+  margin: 1rem auto;
 }
 
 .btn-bg {
+  background-color: var(--third);
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding-inline: 1rem;
   margin: auto;
+  
 }
 
 .my-work {
   font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 2rem;
+  background-color: var(--third);
   text-transform: uppercase;
 }
 
