@@ -114,6 +114,10 @@ body {
   cursor: pointer;
 }
 
+.privacy{
+  display: flex;
+}
+
 /* --- Navbar --- */
 nav {
   z-index: 2;
