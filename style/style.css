@@ -176,24 +176,37 @@ nav div {
 .menu li a,
 .my-work {
   display: block;
-  padding: 0.3rem 0;
-  margin-inline: 0.45rem;
+  /* padding: 0.3rem 0; */
+  /* margin-inline: 0.45rem; */
   position: relative;
 }
 
 .menu li a::before,
 .portfolio-menu li a::before,
-.my-work::before {
+.my-work::before,
+.my-work::after {
   content: '';
   display: block;
   height: 2px;
   width: 100%;
-  background-color: var(--light);
-  /* background-color: var(--dark); */
   position: absolute;
-  bottom: 0;
+
+  background-color: var(--light);
+  
   transform: scale(0, 1);
   transition: transform ease-in-out 300ms;
+}
+
+.menu li a::before,
+.portfolio-menu li a::before,
+.my-work::before,
+.my-work::after {
+  bottom: 0;
+}
+
+.my-work::after{
+  top: 0;
+  transform-origin: right;
 }
 
 .menu li a::before,
@@ -207,13 +220,18 @@ nav div {
 
 .menu li a:hover::before,
 .portfolio-menu li a:hover::before,
-.btn-bg:hover .my-work::before {
+.btn-bg:hover .my-work::before,
+.btn-bg:hover .my-work::after  {
   transform: scale(1, 1);
 }
 
 .menu li a:hover::before,
 .btn-bg:hover .my-work::before {
   transform-origin: right;
+}
+
+.btn-bg:hover .my-work::after  {
+  transform-origin: left;
 }
 
 .portfolio-menu li a:hover::before {
@@ -529,15 +547,15 @@ header h2 img {
 
 .btn-bg {
   background-color: var(--third);
-  border-radius: 10px;
-  padding-inline: 1rem;
+  /* border-radius: 5px; */
+  padding-inline: 0.7rem;
   margin: auto;
-  
 }
 
 .my-work {
   font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  padding: 0.2rem 0;
   background-color: var(--third);
   text-transform: uppercase;
 }
