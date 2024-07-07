@@ -694,9 +694,9 @@ footer i:hover {
     font-size: 0.8rem;
   }
 
-  .flex-column {
+  /* .flex-column {
     max-width: 100%;
-  }
+  } */
 
   header h2 img {
     width: 45px;
