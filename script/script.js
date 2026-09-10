@@ -39,18 +39,18 @@ contactBtn.addEventListener('click', showContact)
 contactClose.addEventListener('click', closeContact)
 
 // --- Hide the Title Screen on Click ---
-let layer = document.getElementById('layer')
-let layerWrap = document.getElementById('layer-wrap')
+// let layer = document.getElementById('layer')
+// let layerWrap = document.getElementById('layer-wrap')
 
-function hideLayer(){
-  layer.style.animation = "fadeOut 1000ms forwards";
-  layerWrap.style.animation = "fadeOut 900ms forwards";
-  layerWrap.style.animation = "moveUp-Y 800ms forwards";
-  document.getElementById('default').style.overflow = 'visible'
-  setTimeout(
-    function () {
-      layer.style.display = 'none'
-    }, 1100);
-}
+// function hideLayer(){
+//   layer.style.animation = "fadeOut 1000ms forwards";
+//   layerWrap.style.animation = "fadeOut 900ms forwards";
+//   layerWrap.style.animation = "moveUp-Y 800ms forwards";
+//   document.getElementById('default').style.overflow = 'visible'
+//   setTimeout(
+//     function () {
+//       layer.style.display = 'none'
+//     }, 1100);
+// }
 
-layerWrap.addEventListener('click', hideLayer)
+// layerWrap.addEventListener('click', hideLayer)
